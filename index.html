@@ -5,55 +5,94 @@
     <head>
       <link rel="icon" type="image/webp" href="logo.webp">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>(Beginners' Guide) 100 Days at Sea Roblox Guide: All Items & Boss List</title>
         
         <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background: #bbbbbb;
       color: #333;
     }
+
     header {
       background: #cbcbcb;
       padding: 10px 20px;
       font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
+
+    header a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #1f59d6;
+      font-size: 12px;
+    }
+
+    header a:hover {
+      text-decoration: underline;
+    }
+
     .game-header {
       text-align: center;
       padding: 20px;
     }
+
     .game-header h1 {
       margin: 10px 0;
       font-size: 28px;
     }
+
     .tags {
       margin: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
     }
+
     .tag {
       display: inline-block;
       background: #dddddd;
       padding: 5px 10px;
-      margin: 0 5px;
       border-radius: 4px;
       font-size: 12px;
     }
+
     .thumbnail {
       text-align: center;
       margin: 20px 0;
+      padding: 0 10px;
     }
+
     .thumbnail img {
-      max-width: 300px;
+      max-width: 100%;
+      width: 300px;
+      height: auto;
       border-radius: 8px;
     }
+
     .badges {
       text-align: center;
       margin: 10px 0;
       font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 10px;
     }
+
     .play-button {
-      display: block inline-block;
-      margin: 540px;
+      display: block;
+      margin: 20px auto;
       padding: 14px 28px;
       background: rgb(74, 47, 194);
       color: white;
@@ -61,11 +100,373 @@
       border-radius: 6px;
       font-weight: bold;
       font-size: 16px;
+      text-decoration: none;
+      max-width: 300px;
+      transition: background 0.3s ease;
     }
+
     .play-button:hover {
       background: #5a0d5a;
-    }  
-    
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .item-boss-list {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .items-list {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .weapons-list {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .bosses-list {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #2e8b57;
+      font-size: 20px;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .items-list img,
+    .weapons-list img,
+    .bosses-list img {
+      width: 80px;
+      height: 80px;
+      margin: 10px 0;
+    }
+
+    .footers {
+      text-align: center;
+      color: #ffffff;
+      background: linear-gradient(135deg, #5f39b8, #7209b7);
+      padding: 25px 15px;
+      margin-top: 40px;
+      border-top: 3px solid #cdb4ff;
+      box-shadow: 0 -5px 20px rgba(114, 9, 183, 0.5);
+    }
+
+    .footers p {
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      margin: 10px 0;
+    }
+
+    .footers a {
+      font-size: 14px;
+      text-decoration: underline;
+      color: #ffffff;
+    }
+
+    .footers a:hover {
+      color: #cdb4ff;
+    }
+
+    .instagram-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .instagram-link img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .feedback {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .feedback button {
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .like-btn {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .like-btn:hover {
+      background-color: #45a049;
+    }
+
+    .dislike-btn {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .dislike-btn:hover {
+      background-color: #d32f2f;
+    }
+
+    footer {
+      padding: 0 20px;
+    }
+
+    /* Tablet & Small Desktop (768px and up) */
+    @media (min-width: 768px) {
+      header {
+        flex-wrap: nowrap;
+      }
+
+      header a {
+        font-size: 14px;
+      }
+
+      .game-header h1 {
+        font-size: 32px;
+      }
+
+      .thumbnail img {
+        width: 350px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      li {
+        font-size: 16px;
+      }
+
+      .items-list img,
+      .weapons-list img,
+      .bosses-list img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    /* Mobile phones (up to 767px) */
+    @media (max-width: 767px) {
+      body {
+        font-size: 14px;
+      }
+
+      header {
+        padding: 10px;
+      }
+
+      header a {
+        margin-right: 8px;
+        font-size: 11px;
+        padding: 5px 8px;
+        background: #f0f0f0;
+        border-radius: 4px;
+      }
+
+      .game-header {
+        padding: 15px 10px;
+      }
+
+      .game-header h1 {
+        font-size: 22px;
+        margin: 5px 0;
+      }
+
+      .game-header p {
+        font-size: 14px;
+        margin: 5px 0;
+      }
+
+      .tags {
+        gap: 5px;
+        margin: 10px 0;
+      }
+
+      .tag {
+        padding: 4px 8px;
+        font-size: 11px;
+      }
+
+      .badges {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 12px;
+        padding: 0 10px;
+      }
+
+      .thumbnail {
+        margin: 15px 0;
+        padding: 0 5px;
+      }
+
+      .thumbnail img {
+        width: 100%;
+        max-width: 250px;
+      }
+
+      .container,
+      .item-boss-list,
+      .items-list,
+      .weapons-list,
+      .bosses-list {
+        margin: 15px 10px;
+        padding: 15px;
+        border-radius: 6px;
+      }
+
+      .play-button {
+        margin: 15px auto;
+        padding: 12px 24px;
+        font-size: 14px;
+        max-width: 250px;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin: 15px 0 10px 0;
+      }
+
+      ul {
+        padding-left: 15px;
+      }
+
+      li {
+        margin-bottom: 12px;
+        font-size: 13px;
+      }
+
+      .items-list img,
+      .weapons-list img,
+      .bosses-list img {
+        width: 70px;
+        height: 70px;
+        margin: 8px 0;
+      }
+
+      .footers {
+        padding: 20px 15px;
+      }
+
+      .footers p {
+        font-size: 12px;
+        margin: 8px 0;
+      }
+
+      .instagram-link {
+        margin-top: 12px;
+      }
+
+      .instagram-link img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .feedback {
+        gap: 8px;
+      }
+
+      .feedback button {
+        padding: 8px 14px;
+        font-size: 14px;
+      }
+    }
+
+    /* Small phones (up to 480px) */
+    @media (max-width: 480px) {
+      header a {
+        font-size: 10px;
+        padding: 4px 6px;
+        margin-right: 5px;
+      }
+
+      .game-header h1 {
+        font-size: 20px;
+      }
+
+      .tag {
+        padding: 3px 6px;
+        font-size: 10px;
+      }
+
+      .badges {
+        font-size: 11px;
+      }
+
+      .thumbnail img {
+        max-width: 200px;
+      }
+
+      .items-list img,
+      .weapons-list img,
+      .bosses-list img {
+        width: 60px;
+        height: 60px;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      li {
+        font-size: 12px;
+      }
+
+      .play-button {
+        padding: 10px 20px;
+        font-size: 13px;
+        max-width: 200px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -74,17 +475,6 @@
   <a href="https://www.google.co.id/index.html" target="blank">Home</a> 
   <a href="https://www.roblox.com/home" target="blank">Roblox</a>
   <a href="https://www.roblox.com/games/70411440483149/100-Days-At-Sea" target="blank">Play 100 Days at Sea on Roblox</a>
-  
-  <style>
-    header a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #1f59d6;
-    }
-    header a:hover {
-      text-decoration: underline;
-    }
-    </style>
 </header>
 
   <div class="game-header">
@@ -113,36 +503,10 @@
 
   <a href="https://www.roblox.com/games/70411440483149/100-Days-At-Sea" class="play-button">
     Play on Roblox
-    </a>
-    <br><br>
+  </a>
 
 <!-- NEW GAME DESCRIPTION -->
  <div class="container">
- <style>
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .item-boss-list {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #2e8b57;
-    }
-    ul {
-      list-style-type: square;
-    }
-    </style>
-
 <h2>About This Game</h2>
 <p>
 🏴‍☠️ You are sent on a mission to the middle of the ocean.<br>
@@ -164,62 +528,37 @@ Open-World Survival game where exploration and base building are the keys to sur
 </div>
 
 <div class="item-boss-list">
-    <p style="font-size: 20px; font-weight: bold; text-align: center; margin-top: 30px;">All Item & Boss List - 100 Days at Sea Roblox</p>
-    <p style="font-size: 16px; text-align: center; margin-bottom: 30px;">Here is a comprehensive list of items and bosses in the game "100 Days at Sea" on Roblox:</p>
+    <p style="font-size: 18px; font-weight: bold; text-align: center; margin-top: 20px;">All Item & Boss List - 100 Days at Sea Roblox</p>
+    <p style="font-size: 14px; text-align: center; margin-bottom: 20px;">Here is a comprehensive list of items and bosses in the game "100 Days at Sea" on Roblox:</p>
 </div>  
 
 <div class="items-list">
-  <style>
-    .items-list {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .weapons-list {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .bosses-list {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background:#fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    } 
-    </style>
+        <h2>Items</h2>
         <ul>
-            <h2>Items</h2>
             <li><strong>Wood Plank:</strong> Used for building structures and crafting items.</li>
-            <img src="Wood Plank.png" alt="Wood Plank" width="100" height="100"> <br>
+            <img src="Wood Plank.png" alt="Wood Plank"> <br>
             <li><strong>Small/Big Gasoline:</strong> Used to increase more Campfires or if shot it can cause an explosion.</li> 
-            <img src="Gasoline.png" alt="Gasoline" width="100" height="100"> <br>
+            <img src="Gasoline.png" alt="Gasoline"> <br>
             <li><strong>Crafting Table:</strong> A crafting station where you can create various items.</li>
-            <img src="https://tse3.mm.bing.net/th/id/OIP.GpbAeKeuHEueT9GYAAYJHwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Crafting Table" width="100" height="100"> <br>
+            <img src="https://tse3.mm.bing.net/th/id/OIP.GpbAeKeuHEueT9GYAAYJHwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Crafting Table"> <br>
             <li><strong>Food:</strong> Essential for survival, restores hunger.</li>
-            <img src="ikan.png" alt="Food" width="100" height="100"> <br>
+            <img src="ikan.png" alt="Food"> <br>
             <li><strong>Crab Trap:</strong> Used to catch food automatically over time.</li>
-            <img src="https://crabbingzone.com/wp-content/uploads/2020/03/Promar-Collapsible-Crab-Trap.png" alt="Crab Trap" width="100" height="100"> <br>
+            <img src="https://crabbingzone.com/wp-content/uploads/2020/03/Promar-Collapsible-Crab-Trap.png" alt="Crab Trap"> <br>
             <li><strong>Fishing Rod:</strong> Used to catch fish. You can also give fish to the Fisherman to receive items.</li>
-            <img src="https://pngimg.com/uploads/fishing_pole/fishing_pole_PNG10579.png" alt="Fishing Rod" width="100" height="100"> <br>
+            <img src="https://pngimg.com/uploads/fishing_pole/fishing_pole_PNG10579.png" alt="Fishing Rod"> <br>
             <li><strong>Sawmill:</strong> Processes wood into planks over time ( 3 wood per planks ).</li>
-            <img src="Sawmill.png" alt="Sawmill" alt="Sawmill" width="100" height="100"> <br>
+            <img src="Sawmill.png" alt="Sawmill"> <br>
             <li><strong>Oil Drill:</strong> Used to extract oil from the ground over time. ( requires 3 wood for operation ).</li>
-            <img src="https://tse2.mm.bing.net/th/id/OIP.wxVl8mT0dmvQyQi6zY_pWAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Oil Drill" width="100" height="100"> <br>
+            <img src="https://tse2.mm.bing.net/th/id/OIP.wxVl8mT0dmvQyQi6zY_pWAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Oil Drill"> <br>
             <li><strong>Ammo Create:</strong> Used to craft ammunition for weapons overtime ( requires 3 iron for operation ).</li>
-            <img src="https://png.pngtree.com/png-vector/20240730/ourmid/pngtree-heavy-duty-ammo-gun-png-image_13304104.png" alt="Ammo Create" width="100" height="100"> <br>
+            <img src="https://png.pngtree.com/png-vector/20240730/ourmid/pngtree-heavy-duty-ammo-gun-png-image_13304104.png" alt="Ammo Create"> <br>
          </ul>
+</div>
 
 <div class="weapons-list">
+        <h2>Weapons</h2>
         <ul>
-            <h2>Weapons</h2>
             <li><strong>Hatchet:</strong> A versatile tool used for chopping wood and as a weapon.</li>
             <li><strong>Grenade:</strong> A throwable explosive device used for combat.</li>
             <li><strong>Buku Boku Spear:</strong> A ranged weapon that can be used to attack enemies from a distance. (This item can be dropped if you killed a buku boku)</li>
@@ -229,139 +568,64 @@ Open-World Survival game where exploration and base building are the keys to sur
             <li><strong>Rifle:</strong> A long-range firearm that is more accurate and more powerful </li>  
             <li><strong>Star Magma:</strong> A long-range wizard staff can drop fireballs/meteors from the sky. (This item cannot be crafted unless you defeat the boss in the volcano.)</li>
         </ul>
+</div>
 
 <div class="bosses-list">    
+        <h2>Boss</h2>
         <ul>
-            <h2>Boss</h2>
-            <li><strong>The Vessel Pirate:</strong> Pirate vessels can be defeated by using ranged weapons to avoid their numerous attacks or by crafting a Kraken Tail using 30 wood, 30 iron, and 12 ghost jars at a crafting table. After defeating a pirate vessel, all its corpses can be turned into ghost jars at a crafting table.</li> <br>
-            <li><strong>The Kraken:</strong> Kraken will appear if there is a notification in Roblox and will attack your island, you can defeat it with melee and ranged weapons, if you defeat the kraken, it will drop a Ghost Jar.</li> <br>
-            <li><strong>The Golem:</strong> You can find it in some volcanoes by climbing using Harpoon, then defeating 3 fiery golems in different places (usually in the corner of the volcano on the MAP), then bring the three fiery golems into the volcano in the middle then drop the three golems into the middle and will fight the Final Boss Golem, if you succeed in defeating you will get STAR MAGMA. </li>
+            <li><strong>The Vessel Pirate:</strong> Pirate vessels can be defeated by using ranged weapons to avoid their numerous attacks or by crafting a Kraken Tail using 30 wood, 30 iron, and 12 g[...]</li>
+            <li><strong>The Kraken:</strong> Kraken will appear if there is a notification in Roblox and will attack your island, you can defeat it with melee and ranged weapons, if you defeat the kra[...]</li>
+            <li><strong>The Golem:</strong> You can find it in some volcanoes by climbing using Harpoon, then defeating 3 fiery golems in different places (usually in the corner of the volcano on the [...]</li>
         </ul>
-
-          
-    </a>    
-    </body>
-</head>
-</div> <br><br>
+</div>
 
 <div class="footers">
-    <Style>
-    .footers {
-      text-align: center;
-      color: #000000;
-    }
-     .footers p {
-       font-size: 15px;
-       font-family: Arial, sans-serif;
-     }
-     .footers a {
-       font-size: 15px;
-       text-decoration: underline;
-       color:#1f59d6
-     }
-     .footers a:hover {
-       color:#5a0d5a
-     }
-     .footers span {
-       font-size: 15px;
-       text-decoration: underline;
-       color:#1f59d6
-     }
-     .footers span:hover {
-       color:#5a0d5a
-     }
-     .footers {
-  box-shadow: 0 -5px 20px rgba(114, 9, 183, 0.5);
-     }
-     .footers {
-  text-align: center;
-  color: #ffffff;
-  background: linear-gradient(135deg, #5f39b8, #7209b7);
-  padding: 25px 15px;
-  margin-top: 40px;
-  border-top: 3px solid #cdb4ff; 
-     }
-     .instagram-link {
-  display: inline-flex;
-  align-items: center;
-  margin-top: 15px;
-     } 
-     .feedback {
-  margin-top: 20px;
-     }
-  .feedback button {
-    border: none;
-    padding: 10px 18px;
-    margin: 5px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-     }
-
-  .like-btn {
-    background-color: #4CAF50;
-    color: white;
-     }
-
-  .like-btn:hover {
-    background-color: #45a049;
-     }
-
-  .dislike-btn {
-    background-color: #f44336;
-    color: white;
-    }
-
-  .dislike-btn:hover {
-    background-color: #d32f2f;
-    }
-  </Style>
-
-<footer>
-   <p>Was this page helpful?</p>
+  <footer>
+    <p>Was this page helpful?</p>
   
-  <button class="like-btn" onclick="selectFeedback('like')">
-    👍 Like
-  </button>
-  
-  <button class="dislike-btn" onclick="selectFeedback('dislike')">
-    👎 Dislike
-  </button>
+    <div class="feedback">
+      <button class="like-btn" onclick="selectFeedback('like')">
+        👍 Like
+      </button>
+      
+      <button class="dislike-btn" onclick="selectFeedback('dislike')">
+        👎 Dislike
+      </button>
+    </div>
 
-  <p id="feedback-result"></p>
-  <script>
-    function selectFeedback(type) {
-      const feedbackResult = document.getElementById('feedback-result');
-      if (type === 'like') {
-        feedbackResult.textContent = 'Thank you for your feedback!';
-      } else {
-        feedbackResult.textContent = 'We appreciate your feedback and will work to improve!';
+    <p id="feedback-result"></p>
+    <script>
+      function selectFeedback(type) {
+        const feedbackResult = document.getElementById('feedback-result');
+        if (type === 'like') {
+          feedbackResult.textContent = 'Thank you for your feedback!';
+        } else {
+          feedbackResult.textContent = 'We appreciate your feedback and will work to improve!';
+        }
       }
-    }
-  </script>
-  <p>
-        This list is not exhaustive, and there may be additional items and bosses added in future updates of the game. Always stay tuned for new content!
-  </p> 
+    </script>
 
-  <a href="#">Back to Top</a>
-  <span class="arrow">↑</span>
+    <p>
+      This list is not exhaustive, and there may be additional items and bosses added in future updates of the game. Always stay tuned for new content!
+    </p> 
 
-  <p>
-    Gollay is not affiliated with Roblox Corporation. Roblox is a trademark of Roblox Corporation.
-  </p>
+    <a href="#">Back to Top ↑</a>
 
-  <p>
-    2026 GollayKCW. All game data sourced from my own gameplay experience and research.  
-    For the most accurate and up-to-date information, <br>  please refer to the official Roblox game page and community resources. :)
-    
-  </p>
- <span class="instagram-link">
-    <img src="https://static.vecteezy.com/system/resources/previews/024/170/864/original/instagram-icon-logo-symbol-free-png.png" alt="Instagram" width="30" height="30">
-    <a href="https://www.instagram.com/gollaykcw/" target="_blank">Follow me on Instagram!</a>
-  </span>
+    <p>
+      Gollay is not affiliated with Roblox Corporation. Roblox is a trademark of Roblox Corporation.
+    </p>
 
-</footer>
-</body>
+    <p>
+      2026 GollayKCW. All game data sourced from my own gameplay experience and research.  
+      For the most accurate and up-to-date information, please refer to the official Roblox game page and community resources. :)
+    </p>
+
+    <span class="instagram-link">
+      <img src="https://static.vecteezy.com/system/resources/previews/024/170/864/original/instagram-icon-logo-symbol-free-png.png" alt="Instagram">
+      <a href="https://www.instagram.com/gollaykcw/" target="_blank">Follow me on Instagram!</a>
+    </span>
+  </footer>
 </div>
+
+</body>
 </html>
